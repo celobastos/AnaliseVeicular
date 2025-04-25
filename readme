@@ -29,7 +29,7 @@ ESTRUTURA RESUMIDA
 
 COMO USAR
 1. Faça upload dos vídeos no Colab ou coloque-os na raiz do projeto
-2. Copie e cole cada bloco de código na ordem indicada e execute as células
+2. Copie e cole cada bloco de código na ordem indicada e execute as células e adicione o caminho dos videos na segunda celula
 3. Ao final, confira para cada vídeo:
    - arquivo *_time_dist.csv com a distribuição de contagem por segundo
    - exibição interativa do DataFrame
