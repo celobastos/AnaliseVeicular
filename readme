@@ -1,1 +1,58 @@
-Readme
+```markdown
+# Vehicle Counting at Traffic Lights
+
+Um pipeline leve em Python para processar vídeos de semáforo, detectar e rastrear veículos, contar quantos cruzam uma linha virtual e gerar relatórios por vídeo.
+
+---
+
+## 🔧 Pré-requisitos
+
+- Python 3.7+  
+- Google Colab ou ambiente com CPU/GPU  
+- Vídeos de entrada na pasta do projeto
+
+---
+
+## 🛠 Ferramentas
+
+- **YOLOv5 (ultralytics)**: detecção em tempo real de carros, motos, ônibus e caminhões  
+- **OpenCV**: leitura de vídeos, extração de frames e processamento de ROI para semáforo  
+- **CentroidTracker (custom)**: rastreamento frame-a-frame por distância de centroides, sem dependências externas complexas  
+- **NumPy & SciPy**: cálculos numéricos e distâncias euclidianas  
+- **pandas**: manipulação e exportação de contagens em CSV  
+- **ace_tools**: exibição interativa dos DataFrames no Colab
+
+---
+
+## ⚙ Estrutura resumida
+
+1. **Instalação**  
+   ```bash
+   pip install ultralytics opencv-python-headless pandas numpy scipy
+   ```
+2. **Configuração**  
+   - Importar libs, carregar YOLOv5 e listar vídeos  
+3. **Detecção de semáforo**  
+   - ROI em HSV para diferenciar verde vs. vermelho  
+4. **Rastreamento**  
+   - `CentroidTracker.update()` associa caixas por distância, mantém IDs  
+5. **Contagem**  
+   - Incrementa quando o centroide cruza a linha e verifica cor do semáforo  
+6. **Relatórios**  
+   - Gera `*_time_dist.csv` (contagem por segundo)  
+   - Exibe DataFrame e imprime resumo (total, verde vs. vermelho)
+
+---
+
+## 🚀 Uso
+
+1. Faça upload dos vídeos no Colab.  
+2. Cole e execute as células na ordem acima.  
+3. Confira os CSVs e o resumo impresso para cada vídeo.
+
+---
+
+## 📑 Licença
+
+MIT License.  
+```
