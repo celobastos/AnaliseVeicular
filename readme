@@ -1,5 +1,3 @@
-Vehicle Counting at Traffic Lights
-
 Um pipeline em Python para processar vídeos de semáforo, detectar e rastrear veículos, contar quantos cruzam uma linha virtual e gerar relatórios por vídeo.
 
 PRE-REQUISITOS
